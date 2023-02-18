@@ -1,0 +1,8 @@
+{
+  "$kind": "Microsoft.MultiLanguageRecognizer",
+  "id": "LUIS_mentalHealth_bot",
+  "recognizers": {
+    "en-us": "mentalHealth_bot.en-us.lu",
+    "": "mentalHealth_bot.en-us.lu"
+  }
+}
