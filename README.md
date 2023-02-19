@@ -13,10 +13,10 @@ Curi is a mental health chatbot that provides a safe and anonymous space for peo
 ## Instructions
 In order to run this program:
 1. Clone the repository from github:
-2. run npm i to install all dependencies
+2. run ```npm install``` to install all dependencies
 
 
-#Dependancies
+##Dependancies
 ``` pip install NLTK ```
 
 ## Contributers
