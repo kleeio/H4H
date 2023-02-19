@@ -1,6 +1,4 @@
-# Curi
-## Your personal (mental) health care companion
-### 2023 Hack for Humanity Project
+# Curi: your personal (mental) health care companion
 
 ## Table of Contents
 1. [Description](#description)
@@ -27,3 +25,5 @@ Troy Sorogon <br>
 Aubrey Robinson
 Maleke Hanson <br>
 Lidia Perzyna
+
+### 2023 Hack for Humanity
