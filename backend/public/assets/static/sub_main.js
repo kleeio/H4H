@@ -72,27 +72,56 @@ $('#send_button').on('click', function (e) {
 
 	// show bot message
 	setTimeout(function () {
-		showBotMessage(randomstring());
+		// showBotMessage(randomstring());
+		showBotMessage("hey");
 	}, 300);
 });
 
-/**
- * Returns a random string. Just to specify bot message to the user.
- */
-function randomstring(length = 20) {
-	let output = '';
 
-	// magic function
-	var randomchar = function () {
-		var n = Math.floor(Math.random() * 62);
-		if (n < 10) return n;
-		if (n < 36) return String.fromCharCode(n + 55);
-		return String.fromCharCode(n + 61);
-	};
+const socket = io("http://localhost:5005");
+const messages = document.getElementById('messages');
+const form = document.getElementById('send_button');
+const messageInput = document.getElementById('msg_input');
 
-	while (output.length < length) output += randomchar();
-	return output;
-}
+socket.on('connect', function () {
+	console.log("Connected to Socket.io server");
+});
+
+socket.on('connect_error', (error) => {
+	// Write any connection errors to the console
+	console.error(error);
+});
+
+
+
+
+socket.on('bot_uttered', function (response) {
+	console.log("Bot uttered:", response);
+	if (response.text) {
+		appendMessage(response.text, "received");
+	}
+	if (response.attachment) {
+		appendImage(response.attachment.payload.src, "received");
+	}
+	if (response.quick_replies) {
+		appendQuickReplies(response.quick_replies);
+	}
+});
+
+form.addEventListener('submit', function (e) {
+	e.preventDefault();
+	const msg = messageInput.value;
+	if (msg) {
+		socket.emit('user_uttered', {
+			"message": msg,
+		});
+		messageInput.value = '';
+
+		appendMessage(msg, "sent");
+	}
+});
+
+
 
 /**
  * Set initial bot message to the screen for the user.
