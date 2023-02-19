@@ -1,6 +1,3 @@
-<a href="https://github.com/badges/shields/graphs/contributors" alt="Contributors">
-        <img src="https://img.shields.io/github/contributors/badges/shields" /></a>textLength="950">HackforHumanity</text></g></svg>
-
 # Curi: your personal (mental) health care companion
 
 ## Table of Contents
