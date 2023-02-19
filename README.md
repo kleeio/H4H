@@ -15,7 +15,7 @@ With the steady increase of mental health issues such as depression and anxiety,
 ## Instructions
 In order to run this program:
 1. Clone the repository from github:
-2. install nltk``` pip install NLTK ```
+2. install nltk by running ``` pip install NLTK ```
 3. run ```npm install``` to install all dependencies
 
 ## Contributers
