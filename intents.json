@@ -1,6 +1,6 @@
 [
     {
-        "queries": [
+        "patterns": [
             "what is depression?"
         ],
         "responses": [
@@ -8,7 +8,7 @@
         ]
     },
     {
-        "queries": [
+        "patterns": [
             "i feel i have let my parents down"
         ],
         "responses": [
@@ -16,7 +16,7 @@
         ]
     },
     {
-        "queries": [
+        "patterns": [
             "what are the types of depression?"
         ],
         "responses": [
@@ -24,7 +24,7 @@
         ]
     },
     {
-        "queries": [
+        "patterns": [
             "i am good for nothing."
         ],
         "responses": [
@@ -40,7 +40,7 @@
         ]
     },
     {
-        "queries": [
+        "patterns": [
             "i want to kill myself"
         ],
         "responses": [
@@ -48,7 +48,7 @@
         ]
     },
     {
-        "queries": [
+        "patterns": [
             "i am afraid i will fail again"
         ],
         "responses": [
@@ -56,7 +56,7 @@
         ]
     },
     {
-        "queries": [
+        "patterns": [
             "what is depression?"
         ],
         "responses": [
@@ -64,7 +64,7 @@
         ]
     },
     {
-        "queries": [
+        "patterns": [
             "what are the causes of depression?"
         ],
         "responses": [
@@ -72,7 +72,7 @@
         ]
     },
     {
-        "queries": [
+        "patterns": [
             "what are the top causes of depression?"
         ],
         "responses": [
@@ -80,7 +80,7 @@
         ]
     },
     {
-        "queries": [
+        "patterns": [
             "which age group has the highest rate of depression?"
         ],
         "responses": [
@@ -88,7 +88,7 @@
         ]
     },
     {
-        "queries": [
+        "patterns": [
             "which country has the highest rate of depression?"
         ],
         "responses": [
@@ -96,7 +96,7 @@
         ]
     },
     {
-        "queries": [
+        "patterns": [
             "which country has the lowest rate of depression?"
         ],
         "responses": [
@@ -104,7 +104,7 @@
         ]
     },
     {
-        "queries": [
+        "patterns": [
             "is school a cause of depression?"
         ],
         "responses": [
@@ -112,7 +112,7 @@
         ]
     },
     {
-        "queries": [
+        "patterns": [
             "what is the biological cause of depression?"
         ],
         "responses": [
@@ -120,7 +120,7 @@
         ]
     },
     {
-        "queries": [
+        "patterns": [
             "how does depression affect the world?"
         ],
         "responses": [
@@ -128,7 +128,7 @@
         ]
     },
     {
-        "queries": [
+        "patterns": [
             "which race has the highest rate of depression?"
         ],
         "responses": [
@@ -136,7 +136,7 @@
         ]
     },
     {
-        "queries": [
+        "patterns": [
             "what is the meaning of anxiety and depression?"
         ],
         "responses": [
@@ -144,7 +144,7 @@
         ]
     },
     {
-        "queries": [
+        "patterns": [
             "does oversleeping cause depression?"
         ],
         "responses": [
@@ -152,7 +152,7 @@
         ]
     },
     {
-        "queries": [
+        "patterns": [
             "can lack of sleep make you feel sad?"
         ],
         "responses": [
@@ -160,7 +160,7 @@
         ]
     },
     {
-        "queries": [
+        "patterns": [
             "is depression a side effect of diabetes?"
         ],
         "responses": [
@@ -168,7 +168,7 @@
         ]
     },
     {
-        "queries": [
+        "patterns": [
             "can low blood sugar cause suicidal thoughts?"
         ],
         "responses": [
@@ -176,7 +176,7 @@
         ]
     },
     {
-        "queries": [
+        "patterns": [
             "how long can anxiety last?"
         ],
         "responses": [
@@ -184,7 +184,7 @@
         ]
     },
     {
-        "queries": [
+        "patterns": [
             "what are the stages of anxiety?"
         ],
         "responses": [
@@ -192,7 +192,7 @@
         ]
     },
     {
-        "queries": [
+        "patterns": [
             "at what age does anxiety peak?"
         ],
         "responses": [
@@ -200,7 +200,7 @@
         ]
     },
     {
-        "queries": [
+        "patterns": [
             "why is anxiety bad for you?"
         ],
         "responses": [
@@ -208,7 +208,7 @@
         ]
     },
     {
-        "queries": [
+        "patterns": [
             "what is the 3 3 3 rule for anxiety?"
         ],
         "responses": [
@@ -216,7 +216,7 @@
         ]
     },
     {
-        "queries": [
+        "patterns": [
             "do we control our thoughts?"
         ],
         "responses": [
@@ -224,7 +224,7 @@
         ]
     },
     {
-        "queries": [
+        "patterns": [
             "how many thoughts a day do we have?"
         ],
         "responses": [
@@ -232,7 +232,7 @@
         ]
     },
     {
-        "queries": [
+        "patterns": [
             "how can we reduce anxiety?"
         ],
         "responses": [
@@ -240,7 +240,7 @@
         ]
     },
     {
-        "queries": [
+        "patterns": [
             "i am lonely!"
         ],
         "responses": [
@@ -248,7 +248,7 @@
         ]
     },
     {
-        "queries": [
+        "patterns": [
             "no one likes me!"
         ],
         "responses": [
@@ -256,7 +256,7 @@
         ]
     },
     {
-        "queries": [
+        "patterns": [
             "i think i am ugly!"
         ],
         "responses": [
@@ -264,7 +264,7 @@
         ]
     },
     {
-        "queries": [
+        "patterns": [
             "i am good for nothing!"
         ],
         "responses": [
@@ -272,7 +272,7 @@
         ]
     },
     {
-        "queries": [
+        "patterns": [
             "i wish i was better than them"
         ],
         "responses": [
@@ -280,7 +280,7 @@
         ]
     },
     {
-        "queries": [
+        "patterns": [
             "i hate myself!"
         ],
         "responses": [
@@ -288,7 +288,7 @@
         ]
     },
     {
-        "queries": [
+        "patterns": [
             "i wish i could've been a winner"
         ],
         "responses": [
@@ -296,7 +296,7 @@
         ]
     },
     {
-        "queries": [
+        "patterns": [
             "i hate losing."
         ],
         "responses": [
@@ -304,7 +304,7 @@
         ]
     },
     {
-        "queries": [
+        "patterns": [
             "i think i'm losing my mind"
         ],
         "responses": [
@@ -312,7 +312,7 @@
         ]
     },
     {
-        "queries": [
+        "patterns": [
             "i want a break"
         ],
         "responses": [
@@ -320,7 +320,7 @@
         ]
     },
     {
-        "queries": [
+        "patterns": [
             "i am stressed out"
         ],
         "responses": [
@@ -328,7 +328,7 @@
         ]
     },
     {
-        "queries": [
+        "patterns": [
             "i will never succeed in life"
         ],
         "responses": [
@@ -336,7 +336,7 @@
         ]
     },
     {
-        "queries": [
+        "patterns": [
             "i am sad"
         ],
         "responses": [
@@ -344,7 +344,7 @@
         ]
     },
     {
-        "queries": [
+        "patterns": [
             "i am a victim of bullying"
         ],
         "responses": [
@@ -352,7 +352,7 @@
         ]
     },
     {
-        "queries": [
+        "patterns": [
             "i am afraid to file a case against bullying"
         ],
         "responses": [
@@ -360,7 +360,7 @@
         ]
     },
     {
-        "queries": [
+        "patterns": [
             "i wish to quit"
         ],
         "responses": [
@@ -368,7 +368,7 @@
         ]
     },
     {
-        "queries": [
+        "patterns": [
             "i want to leave the cou ntry and run away"
         ],
         "responses": [
@@ -376,7 +376,7 @@
         ]
     },
     {
-        "queries": [
+        "patterns": [
             "i let everyojokne down"
         ],
         "responses": [
@@ -384,7 +384,7 @@
         ]
     },
     {
-        "queries": [
+        "patterns": [
             "i can't do this anymore"
         ],
         "responses": [
@@ -392,7 +392,7 @@
         ]
     },
     {
-        "queries": [
+        "patterns": [
             "my time has come"
         ],
         "responses": [
@@ -400,7 +400,7 @@
         ]
     },
     {
-        "queries": [
+        "patterns": [
             "i am feeling anxious lately."
         ],
         "responses": [
