@@ -1,3 +1,24 @@
+
+## intent:sadness
+
+## intent:greetings
+
+## intent:goodbyes
+
+## intent: defition
+
+## intent: question
+
+## intent: suicide
+
+## intent: family/friends: 
+
+## intent: recover
+
+## intent: professional
+
+## intent: causes
+
 ## intent:definition
 - What does it mean to have a mental illness?
 - What is mental health illness
