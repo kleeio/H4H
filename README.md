@@ -22,7 +22,7 @@ In order to run this program:
 Clay Lee <br>
 Zoe Wong <br>
 Troy Sorogon <br>
-Aubrey Robinson
+Aubrey Robinson <br>
 Maleke Hanson <br>
 Lidia Perzyna
 
