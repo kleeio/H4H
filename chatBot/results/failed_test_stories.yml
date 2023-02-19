@@ -1,0 +1,14 @@
+version: "3.1"
+stories:
+- story: answer a question (.\tests\test_stories.yml)
+  steps:
+  - intent: question  # predicted: sadness: How can I stop feeling empty?
+  - action: utter_question
+- story: suggest seeking professional help (.\tests\test_stories.yml)
+  steps:
+  - intent: professional  # predicted: question: How do I find a therapist?
+  - action: utter_professional
+- story: handle no response (.\tests\test_stories.yml)
+  steps:
+  - intent: no_response  # predicted: greet: ...
+  - action: utter_blank

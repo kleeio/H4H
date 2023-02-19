@@ -1,0 +1,129 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - Hi
+    - Hey
+    - Is anyone there?
+    - Hi there
+    - Hello
+    - Hey there
+    - Howdy
+    - Hola
+    - Bonjour
+    - Konnichiwa
+    - Guten tag
+    - Ola
+    - Good morning
+    - Good afternoon
+    - Good evening
+
+- intent: goodbye
+  examples: |
+    - That's all.
+    - I don't have anything more to say
+    - Nothing else
+    - That's all i have to say
+    - no, that would be all
+    - Goodnight
+    - Bye
+    - See you later
+    - Goodbye
+    - Au revoir
+    - Sayonara
+    - ok bye
+    - Bye then
+    - Fare thee well
+
+- intent: sadness
+  examples: |
+    - I've been feeling sadness When I get around a particular person or when I go home, I'm just sad or irritated.
+    - How do I talk about my feelings of depression, and to who do I talk to? 
+    - I have long spurts of depression, anxiety, and need change constantly why?
+    - Why do I feel sad all the time? 
+    - is it normal not to feel empathy?
+    - How can I deal with my depression?
+    - How do I make myself happy without someone who made me happy?
+    - I feel sad.
+    - I feel like my existence is meaningless I've been depressed for quite a while.
+    - I'm feeling really down lately
+    - I've been feeling sad and unmotivated
+    - Everything feels overwhelming
+    - I'm struggling to find joy in anything
+    - I feel hopeless and alone
+    - I can't shake this feeling of sadness
+    - I feel like I'm stuck in a rut
+    - I'm having a hard time getting out of bed in the morning
+    - I feel like no one understands what I'm going through
+
+- intent: definition
+  examples: |
+    - I want to learn more about mental health.
+    - I want to learn about mental health.
+    - I'm interested in learning about mental health.
+    - Tell me another fact about mental health
+    - Tell me a fact about mental health
+    - Define Mental Health
+    - Define Depression
+    - difference between sadness and depression
+
+- intent: question
+  examples: |
+    - Am i suffering from depression?
+    - Am i depressed?
+    - How do i know if i have Depression?
+    - Am i mentally ill?
+    - What is a therapist?
+    - What does a therapist do?
+    - Who is therapy for?
+    - Do i need therapy?
+    - What is therapy?
+    - Am I experiencing a panic attack?
+    - How do I deal with stress?
+    - What can I do to manage my anxiety?
+    - How do I cope with a traumatic event?
+    - Can trauma cause depression?
+    - How do I know if I have PTSD?
+    - How do I manage obsessive thoughts?
+    - What can I do to improve my self-esteem?
+    - How do I know if I have a mental health disorder?
+    - How do I deal with intrusive thoughts?
+    - Can mental illness be hereditary?
+
+- intent: suicide
+  examples: |
+    - How can I resist the urge to cut? 
+    - I feel hopeless and helpless. What can I do?
+    - I've been having thoughts of suicide. What should I do?
+    - I don't want to die but I don't want to live either. What should I do?
+    - I'm afraid that I might hurt myself. What should I do?
+    - I'm feeling overwhelmed and don't know how to cope.
+    - I need help dealing with my suicidal thoughts.
+    - I don't know how to keep going.
+    - I feel like my life is not worth living.
+
+- intent: family
+  examples: |
+    - My family can't stand me I am the problem.
+    - I feel like my mother doesn't support me My mother is combative with me when I say I don't want to talk with her about my depression. 
+    - How do I deal with parental figures who have hurt me? 
+    - My family doesn't understand me.
+    - I feel like I'm always fighting with my parents.
+    - My family doesn't support me.
+    - My family makes me feel guilty all the time.
+    - I feel like an outsider in my own family.
+    - My family doesn't respect my boundaries.
+    - I feel like I can't talk to my family about my problems.
+    - My family is always pressuring me to do things I don't want to do.
+    - My family makes me feel ashamed of who I am.
+
+- intent: professional
+  examples: |
+    - I'm very depressed? I'm very depressed. How do I find someone to talk to?
+    - Is my moodiness just a phase or do I need help?
+
+- intent: no_response
+  examples: |
+    - ""
+    - " "

@@ -1,0 +1,85 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - sadness
+  - definition
+  - question
+  - suicide
+  - family
+  - professional
+  - no_response
+
+responses:
+  utter_blank:
+  - text: "Hi, I need a response in order to be of service!"
+
+  utter_greet:
+  - text: "Hey! How are you?"
+  - text: "Hello there"
+  - text: "Tell me how are you feeling today?" 
+
+  - text: "Hi there. What brings you here today?"
+  - text: "Hi there. How are you feeling today?"
+  - text: "Great to see you. How do you feel currently?"
+  - text: "Hello there. Glad to see you're back. What's going on in your world right now?"
+
+  utter_goodbye:
+  - text: "Bye"
+  - text: "See you later"
+  - text: "Goodbye"
+  - text: "Fare thee well"
+
+  utter_sadness:
+  - text: "I'm sorry to hear that"
+  - text: "I'm here for you."
+  - text: "Talking about it might help."
+  - text: "What do you think is causing this?"
+  - text: "Take a deep breath and gather your thoughts"
+  - text: "I first want to let you know that you are not alone in your feelings and there is always someone there to help."
+  - text: "How long have you been feeling this way?"
+
+  utter_definition:
+  - text: "Maintaining mental health is crucial to stabilizing constructive behaviors, emotions, and thoughts. Focusing on mental health care can increase productivity, enhance our self-image, and improve relationships."
+  - text: "Mental health refers to your overall psychological well-being, including how you feel about yourself, your ability to manage your emotions, and your capacity to cope with life's challenges."
+  - text: "Mental health is an essential component of overall health and well-being, and it includes a range of factors such as emotional, social, and cognitive well-being."
+  - text: "Mental health encompasses a wide range of experiences and emotions, including stress, anxiety, depression, and more. It is important to prioritize your mental health just as you would your physical health."
+
+  utter_question:
+  - text: "It can be difficult to deal with feelings of emptiness and numbness. You might find it helpful to focus on self-care, like getting enough sleep and exercise, or finding a new hobby that you enjoy."
+  - text: "Making new friends can be tough, but it's important to put yourself out there and try new things. You could try joining a club or group that interests you, or volunteering for a cause you care about."
+  - text: "Learning to be happy alone can take time, but it's possible. You might try practicing mindfulness or meditation, or finding a new hobby that you enjoy. It's also important to focus on building a positive relationship with yourself."
+  - text: "Feeling empty can be a difficult and confusing experience. It might be helpful to talk to a therapist or mental health professional, who can provide support and guidance. In the meantime, focusing on self-care and practicing mindfulness can help."
+  - text: "Feeling worthless and tired can be a sign of depression or other mental health issues. It's important to talk to a mental health professional, who can help you understand and manage these feelings. In the meantime, focusing on self-care, like getting enough sleep and exercise, can help improve your mood and energy levels."
+  - text: "It's important to take care of your mental health just like your physical health. Consider making time for self-care activities such as exercise, meditation, or therapy."
+  - text: "It's important to remember that it's okay to not have everything figured out. Take things one step at a time and remember that progress, not perfection, is the goal."
+  - text: "There are many ways to take care of your mental health, such as practicing self-care, seeking support from friends and family, or seeing a mental health professional. Remember that it's okay to ask for help."
+ 
+  utter_suicide:
+  - text: "It sounds like you're going through a really tough time. If you're feeling like you might hurt yourself, it's important that you get help right away."
+  - text: "I'm sorry you're feeling that way. Have you considered calling a helpline or seeking support from a mental health professional?"
+  - text: "Your safety is the most important thing. Please know that there are people who care about you and want to help."
+  - text: "I'm here for you, and I want to make sure that you stay safe."
+  - text: "It's okay to not be okay, and it takes strength to reach out for help. Please know that you are not alone, and that there are people who want to support you through this difficult time."
+
+  utter_family:
+  - text: "It can be hard to navigate relationships when there are challenges or conflicts. Have you considered seeking the support of a professional counselor or therapist?"
+  - text: "It's natural to feel a range of emotions during a difficult time with a loved one. Remember to take care of yourself and prioritize your own well-being."
+  - text: "Relationships can be really challenging, especially when they're strained. It's important to remember that you're not alone and that there is hope for healing."
+  - text: "I'm here to support you through this difficult time. What would be most helpful for you right now?"
+  
+
+  utter_professional:
+  - text: "It sounds like you're going through a lot. I think it would be really helpful for you to speak with a mental health professional who can provide you with more in-depth information and support."
+  - text: "It's great that you're taking steps to better understand your mental health. I recommend speaking with a mental health professional, who can provide you with personalized advice and support."
+  - text: "While I can provide some general information about mental health, it's important to remember that everyone's situation is unique. I recommend speaking with a mental health professional to receive personalized advice and support. They can provide you with the tools and resources you need to better manage your mental health."
+  - text: "It's great that you're asking these questions about your mental health. I recommend speaking with a mental health professional, who can provide you with more in-depth information and support. They can help you better understand your symptoms and develop a treatment plan that works for you."
+
+
+  utter_iamabot:
+  - text: "I am a bot"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

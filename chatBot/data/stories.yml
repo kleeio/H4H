@@ -1,0 +1,48 @@
+version: "3.1"
+
+stories:
+
+- story: greet user
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: say goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: handle sadness
+  steps:
+  - intent: sadness
+  - action: utter_sadness
+
+- story: provide definition
+  steps:
+  - intent: definition
+  - action: utter_definition
+
+- story: answer a question
+  steps:
+  - intent: question
+  - action: utter_question
+
+- story: address suicidal thoughts
+  steps:
+  - intent: suicide
+  - action: utter_suicide
+
+- story: handle family issues
+  steps:
+  - intent: family
+  - action: utter_family
+
+- story: suggest seeking professional help
+  steps:
+  - intent: professional
+  - action: utter_professional
+
+- story: handle no response
+  steps:
+  - intent: no_response
+  - action: utter_blank

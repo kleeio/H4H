@@ -1,0 +1,67 @@
+#### This file contains tests to evaluate that your bot behaves as expected.
+#### If you want to learn more, please see the docs: https://rasa.com/docs/rasa/testing-your-assistant
+
+stories:
+
+- story: greet user
+  steps:
+  - user: |
+      Hi
+    intent: greet
+  - action: utter_greet
+
+- story: say goodbye
+  steps:
+  - user: |
+      Goodbye
+    intent: goodbye
+  - action: utter_goodbye
+
+- story: handle sadness
+  steps:
+  - user: |
+      I've been feeling sad
+    intent: sadness
+  - action: utter_sadness
+
+- story: provide definition
+  steps:
+  - user: |
+      What is mental health?
+    intent: definition
+  - action: utter_definition
+
+- story: answer a question
+  steps:
+  - user: |
+      How can I stop feeling empty?
+    intent: question
+  - action: utter_question
+
+- story: address suicidal thoughts
+  steps:
+  - user: |
+      I am feeling suicidal
+    intent: suicide
+  - action: utter_suicide
+
+- story: handle family issues
+  steps:
+  - user: |
+      I'm having issues with my family
+    intent: family
+  - action: utter_family
+
+- story: suggest seeking professional help
+  steps:
+  - user: |
+      How do I find a therapist?
+    intent: professional
+  - action: utter_professional
+
+- story: handle no response
+  steps:
+  - user: |
+      ...
+    intent: no_response
+  - action: utter_blank
