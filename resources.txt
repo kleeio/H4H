@@ -1,4 +1,8 @@
-SCRAPING WEBSITES:
+Datasets:
+https://github.com/nbertagnolli/counsel-chat/tree/master/data
+https://github.com/pandeyanuradha/Chatbot-for-mental-health/tree/main/Dataset
+https://github.com/fsshakkhor/Depression-Chat-Bot/blob/main/intents.json
+https://github.com/Chinmayrane16/Depression-Chatbot
 
 
 
@@ -7,3 +11,4 @@ NLP:
 
 
 FRONTEND:
+https://github.com/PandaWhoCodes/chatbot-frontend/blob/master/bot.html
