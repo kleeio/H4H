@@ -1,52 +1,66 @@
+import json
 import nltk
-from nltk.chat.util import Chat, reflections
+import random
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.svm import SVC
 
-pairs = [
-    [
-        r"hi|hello|hey",
-        ["Hello! I'm a chatbot here to support you. How can I help you today?", 
-         "Hi there! How are you feeling today?"]
-    ],
-    [
-        r"what is anxiety?",
-        ["Anxiety is a feeling of worry or fear about something that hasn't happened yet. It's a normal emotion, but it can become overwhelming and affect your daily life. Do you want to learn more about it?"]
-    ],
-    [
-        r"yes",
-        ["Anxiety can cause physical symptoms such as sweating, trembling, and a rapid heartbeat. It can also cause thoughts of worry, fear, and dread. If you're experiencing these symptoms, it's important to talk to a mental health professional who can provide you with support and resources. Would you like me to help you find a therapist?"]
-    ],
-    [
-        r"no",
-        ["That's okay. Let me know if you have any other questions."]
-    ],
-    [
-        r"how can i manage anxiety?",
-        ["There are many ways to manage anxiety, such as deep breathing exercises, mindfulness meditation, and physical exercise. Would you like me to walk you through some of these techniques?"]
-    ],
-    [
-        r"yes",
-        ["Sure, let's start with deep breathing. Take a deep breath in through your nose, hold it for a few seconds, and then exhale slowly through your mouth. Repeat this a few times until you feel more relaxed. How do you feel?"]
-    ],
-    [
-        r"better|good",
-        ["That's great to hear! Remember that managing anxiety is a process, and it's okay if it takes time to feel better. Is there anything else I can help you with?"]
-    ],
-    [
-        r"no",
-        ["Okay, take care of yourself. Don't hesitate to reach out to me if you have any questions or concerns."]
-    ],
-    [
-        r"quit",
-        ["Bye! Take care."]
-    ],
-]
+# Read in the intents and responses from a JSON file
+with open('intents.json') as file:
+    data = json.load(file)
+intents = data['intents']
 
-def chatbot():
-    print("Hi! I'm a chatbot here to support you. How can I help you today?")
+# Preprocess the intents and responses
+lemmatizer = nltk.WordNetLemmatizer()
+stop_words = set(stopwords.words('english'))
 
-    chat = Chat(pairs, reflections)
-    chat.converse()
+def preprocess(text):
+    # Tokenize the text
+    tokens = word_tokenize(text.lower())
+    # Remove stop words and non-alphabetic tokens
+    tokens = [token for token in tokens if token.isalpha() and token not in stop_words]
+    # Lemmatize the tokens
+    tokens = [lemmatizer.lemmatize(token) for token in tokens]
+    return ' '.join(tokens)
 
-if __name__ == "__main__":
+X = []
+y = []
+for intent in intents:
+    for pattern in intent['patterns']:
+        X.append(preprocess(pattern))
+        y.append(intent['tag'])
+
+# Extract features using TF-IDF
+vectorizer = TfidfVectorizer()
+X = vectorizer.fit_transform(X)
+
+# Train a Support Vector Machine classifier
+clf = SVC(kernel='linear')
+clf.fit(X, y)
+
+# Define a function to classify user inputs and generate responses
+def classify_intent(text):
+    X_input = vectorizer.transform([preprocess(text)])
+    intent = clf.predict(X_input)[0]
+    return intent
+
+def generate_response(intent):
+    for i in intents:
+        if i['tag'] == intent:
+            responses = i['responses']
+    return random.choice(responses)
+
+def chat():
+    print("Hi, I'm a chatbot. How can I help you today?")
+    while True:
+        user_input = input("> ")
+        intent = classify_intent(user_input)
+        response = generate_response(intent)
+        print(response)
+
+if __name__ == '__main__':
     nltk.download('punkt')
-    chatbot()
+    nltk.download('stopwords')
+    nltk.download('wordnet')
+    chat()
