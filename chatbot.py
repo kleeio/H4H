@@ -7,7 +7,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.svm import SVC
 
 # Read in the intents and responses from a JSON file
-with open('intents.json') as file:
+with open('intentsCombined.json') as file:
     data = json.load(file)
 intents = data['intents']
 
@@ -64,3 +64,4 @@ if __name__ == '__main__':
     nltk.download('stopwords')
     nltk.download('wordnet')
     chat()
+

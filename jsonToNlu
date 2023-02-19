@@ -1,0 +1,18 @@
+import json
+
+# Read in the intents and responses from a JSON file
+with open('intentsCombined.json') as file:
+    data = json.load(file)
+
+# Create the nlu.md file
+nlu_file = open('nlu.md', 'w')
+
+# Write the NLU data to the nlu.md file
+for intent in data['intents']:
+    nlu_file.write(f"## intent:{intent['tag']}\n")
+    for pattern in intent['patterns']:
+        nlu_file.write(f"- {pattern}\n")
+
+nlu_file.close()
+
+print("Successfully converted intents to Rasa NLU Markdown format and wrote to nlu.md")
