@@ -22,7 +22,7 @@ function renderMessageToScreen(args) {
 	// init element
 	let message = $(`
 	<li class="message ${args.message_side}">
-		<div class="avatar"></div>
+		<i class="fas fa-heart avatar" style="font-size:36px;"></i>
 		<div class="text_wrapper">
 			<div class="text">${args.text}</div>
 			<div class="timestamp">${displayDate}</div>

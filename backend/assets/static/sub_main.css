@@ -15,24 +15,24 @@ body {
 }
 
 .chat_window {
-	margin-left: auto;
-    margin-right: auto;
-    width: 40em;
+	margin-left: 40px;
+    margin-right: 40px;
+    width: 77em;
 	border-radius: 10px;
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-	background-color: #f8f8f8;
+	background-color: #4d4c4c;
 	overflow: hidden;
 }
 
 .top_menu {
-	background-color: #fff;
+	background-color: #4d627999;
 	padding: 13px 0px;
 	box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
 }
 
 .top_menu .title {
 	text-align: center;
-	color: #337ab7;
+	color: #ffffff;
 	font-size: 20px;
 }
 
@@ -106,27 +106,28 @@ body {
 .messages .message.left .avatar {
 	float: left;
 	margin: 1%;
-	background: rgb(239, 159, 159);;
+	color:#eb6c6c;
 }
 
 .messages .message.left .text_wrapper {
-	background-color: #f3edbe;
+	background-color: #e4e2d0;
 	margin-left: 20px;
 }
 
 .messages .message.left .timestamp {
-	color: #b0742f;
+	color: #746554;
 }
 
 /* user message */
 
 .messages .message.right .avatar {
 	float: right;
-	background: rgb(125, 207, 174);
+	margin: 2%;
+	color:#aba2a2;
 }
 
 .messages .message.right .text_wrapper {
-	background-color: rgb(195, 225, 234);
+	background-color: rgb(195, 211, 216);
 	margin: 1%;
 	margin-right: 20px;
 	float: right;
@@ -139,7 +140,7 @@ body {
 /* text inpur from user */
 
 .bottom_wrapper {
-	background-color: #fff;
+	background-color: #4d627999;
 	padding: 20px;
 	bottom: 0;
 	display: flex;
@@ -156,12 +157,12 @@ body {
 
 .app_button_1 {
 	width: 140px;
-	background-color: #a3d063;
+	background-color: #efdaa0;
 	border-radius: 50px;
 	cursor: pointer;
 	padding: 12px;
 
-	color: #fff;
+	color: #4d4545;
 	font-size: 18px;
 	font-weight: 300;
 	text-align: center;
