@@ -1,4 +1,3 @@
-
 # Curi: your personal (mental) health care companion
 
 ## Table of Contents
