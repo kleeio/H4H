@@ -1,4 +1,5 @@
 # Curi: your personal (mental) health care companion
+#### (cure-e)
 
 ## Table of Contents
 1. [Description](#description)
