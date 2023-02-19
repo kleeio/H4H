@@ -15,6 +15,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300|Open+Sans:300|Oxygen|Material+Icons"
 			rel="stylesheet">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script src=”/socket.io/socket.io.js”></script>
 
 		<!-- custom css -->
 		<link rel="stylesheet" type="text/css" href="assets/static/sub_main.css">
@@ -39,46 +40,73 @@
 				<h2>Mental Health Chat God</h2>
 				<p>A chat God to fix all of your down bad issues lol</p>
 			</header>
-				<div class="row padded_row">
-					<!-- right side content -->
-					<div class="col-md-7">
-						<div class="chat_window">
-							<div class="top_menu">
-								<div class="title">ChatBot</div>
-							</div>
-							<!-- dynamically rendered -->
-							<ul class="messages"></ul>
-							<!-- input -->
-							<div class="bottom_wrapper">
-								<input id="msg_input" placeholder="Start chatting.." />
-								<div id="send_button" class="app_button_1">Send</div>
-							</div>
+
+			<div class="row padded_row">
+				<!-- right side content -->
+				<div class="col-md-7">
+					<div class="chat_window">
+						<div class="top_menu">
+							<div class="title">ChatBot</div>
+						</div>
+						<!-- dynamically rendered -->
+						<ul class="messages"></ul>
+						<!-- input -->
+						<div class="bottom_wrapper">
+							<input id="msg_input" placeholder="Start chatting.." />
+							<div id="send_button" class="app_button_1">Send</div>
 						</div>
 					</div>
 				</div>
-
-				<!-- vendor script files -->
-				<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
-				</script>
 			</div>
+			<script>
+				var socket = io();
+				$(() => {
+					$("#send").click(() => {
+						sendMessage({ name: $("#name").val(), message: $("#message").val() });
+					})
+
+					getMessages()
+				})
+
+				socket.on('message', addMessages)
+
+				function addMessages(message) {
+					$("#messages").append(`<h4> ${message.name} </h4> <p> ${message.message} </p>`)
+				}
+
+				function getMessages() {
+					$.get('http://localhost:3000/messages', (data) => {
+						data.forEach(addMessages);
+					})
+				}
+
+				function sendMessage(message) {
+					$.post('http://localhost:3000/messages', message);
+				}
+			</script>
+
+			<!-- vendor script files -->
+			<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
+			</script>
+	</div>
 
 
-			<!-- Footer -->
-			<footer id="footer">
-				<ul class="icons">
-					<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-					<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-					<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-					<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-					<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-					<li><a href="#" class="icon brands fa-google-plus"><span class="label">Google+</span></a></li>
-				</ul>
-				<ul class="copyright">
-					<li>&copy; Untitled. All rights reserved.</li>
-					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-				</ul>
-			</footer>
+	<!-- Footer -->
+	<footer id="footer">
+		<ul class="icons">
+			<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+			<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+			<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+			<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+			<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+			<li><a href="#" class="icon brands fa-google-plus"><span class="label">Google+</span></a></li>
+		</ul>
+		<ul class="copyright">
+			<li>&copy; Untitled. All rights reserved.</li>
+			<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+		</ul>
+	</footer>
 
 	</div>
 
