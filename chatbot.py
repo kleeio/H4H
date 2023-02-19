@@ -2,15 +2,22 @@ import pandas as pd
 import json
 
 json_data = None
-with open("20200325_counsel_chat.json", "r") as f:
-    data = f.read()
-    json_data = json.loads(data)
+f =  open("20200325_counsel_chat.json", "r")
+json_data = json.load(f)
 
-for key in json_data.keys():
-    print(key)
+toReturn = {}
+toReturn["pattern"] = {}
+toReturn["response"] = {}
 
-del json_data['thereapistInfo']
+for i in range(0, 2128):
+    title = json_data["questionTitle"][str(i)]
+    text = json_data["questionText"][str(i)]
+    question = title + " " + text
+    print(question)
+    toReturn["pattern"][i] = question
+    toReturn["response"][i] = json_data['answerText'][str(i)]
 
-print("After:")
-for key in json_data.keys():
-    print(key)
+with open("20200325_counsel_chat.json", "w") as fp:
+    json.dump(toReturn, fp)
+
+f.close() 
