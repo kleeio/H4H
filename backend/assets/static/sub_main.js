@@ -71,27 +71,39 @@ $('#send_button').on('click', function (e) {
 	$('#msg_input').val('');
 
 	// show bot message
-	setTimeout(function () {
-		showBotMessage(randomstring());
-	}, 300);
+	// setTimeout(function () {
+	showBotMessage(randomstring());
+	// }, 300);
 });
 
 /**
  * Returns a random string. Just to specify bot message to the user.
  */
-function randomstring(length = 20) {
-	let output = '';
+function randomstring() {
+	// let output = 'no';
+	// let output = '';
+	console.log($('#msg_input').val());
+	$.ajax({
+		url: 'http://localhost:5005/webhooks/rest/webhook',
+		method: 'POST',
+		data: JSON.stringify({
+			"sender": "user",
+			"message": $('#msg_input').val()
+		}),
+		contentType: `application/json`,
+		success: function (response) {
+			console.log(response[0].text);
+			// showBotMessage(response[0].text);
+			return "hello";
+			// return response[0].text;
+		},
+		error: function () {
+			// showBotMessage("error");
+			return "error";
+		}
+	});
 
-	// magic function
-	var randomchar = function () {
-		var n = Math.floor(Math.random() * 62);
-		if (n < 10) return n;
-		if (n < 36) return String.fromCharCode(n + 55);
-		return String.fromCharCode(n + 61);
-	};
-
-	while (output.length < length) output += randomchar();
-	return output;
+	// return output;
 }
 
 /**

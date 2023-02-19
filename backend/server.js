@@ -1,8 +1,7 @@
 const express = require('express');
 const app = express();
 
-var http = require('http').Server(app);
-var io = require('socket.io')(http);
+
 const port = process.env.PORT || 3000;
 
 // serve static assets (stylesheets, images, etc.)
