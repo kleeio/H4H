@@ -28,4 +28,4 @@ Aubrey Robinson <br>
 Maleke Hanson <br>
 Lidia Perzyna
 
-### 2023 Hack for Humanity
+### 2023 Hack for Humanity 🌏
