@@ -15,8 +15,7 @@ In order to run this program:
 1. Clone the repository from github:
 2. run ```npm install``` to install all dependencies
 
-
-##Dependancies
+## Dependancies
 ``` pip install NLTK ```
 
 ## Contributers
