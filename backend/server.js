@@ -20,22 +20,6 @@ app.get('/chatbot.html', function (req, res) {
 });
 
 
-io.on('connection', () => {
-  console.log('user connected');
-});
-
-app.post('/messages', (req, res) => {
-  var message = new Message(req.body);
-  message.save((err) => {
-    if (err)
-      sendStatus(500);
-    io.emit('message', req.body);
-    res.sendStatus(200);
-  })
-})
-
-
-
 // start the server
 app.listen(port, function (req, res) {
   console.log(`Server listening on port ${port}.`);
